@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 05 Apr 2023 pada 04.47
+-- Waktu pembuatan: 10 Jun 2023 pada 16.42
 -- Versi server: 10.4.24-MariaDB
 -- Versi PHP: 7.4.29
 
@@ -56,7 +56,10 @@ CREATE TABLE `komentar` (
 --
 
 INSERT INTO `komentar` (`id`, `id_post`, `komentar`) VALUES
-(1, 1, 'Selamat Datang');
+(1, 1, 'Selamat Datang'),
+(2, 2, 'KERENN'),
+(3, 3, 'BAGUS BANGET'),
+(4, 4, 'iyaaaaaaaaaa');
 
 -- --------------------------------------------------------
 
@@ -76,7 +79,8 @@ CREATE TABLE `post` (
 --
 
 INSERT INTO `post` (`id`, `id_kategori`, `judul`, `isi`) VALUES
-(1, 1, 'Tempat Makan', 'Tes');
+(1, 1, 'Tempat Makan', 'Tes'),
+(2, 2, 'PROFILEKU', 'perkenalkan nama saya heydaristo');
 
 --
 -- Indexes for dumped tables
@@ -92,15 +96,13 @@ ALTER TABLE `kategori`
 -- Indeks untuk tabel `komentar`
 --
 ALTER TABLE `komentar`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `id_post` (`id_post`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indeks untuk tabel `post`
 --
 ALTER TABLE `post`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `id_kategori` (`id_kategori`);
+  ADD PRIMARY KEY (`id`);
 
 --
 -- AUTO_INCREMENT untuk tabel yang dibuang
@@ -110,29 +112,13 @@ ALTER TABLE `post`
 -- AUTO_INCREMENT untuk tabel `komentar`
 --
 ALTER TABLE `komentar`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT untuk tabel `post`
 --
 ALTER TABLE `post`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
--- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
---
-
---
--- Ketidakleluasaan untuk tabel `kategori`
---
-ALTER TABLE `kategori`
-  ADD CONSTRAINT `kategori_ibfk_1` FOREIGN KEY (`id`) REFERENCES `post` (`id_kategori`);
-
---
--- Ketidakleluasaan untuk tabel `post`
---
-ALTER TABLE `post`
-  ADD CONSTRAINT `post_ibfk_1` FOREIGN KEY (`id`) REFERENCES `komentar` (`id_post`);
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

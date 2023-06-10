@@ -9,7 +9,7 @@
 <body>
     <center>
         <h1>Tugas WEB API</h1>
-        <a href="kirimdata.php"><button>KIRIM DATA</button></a>
+        <!-- <a href="kirimdata.php"><button>KIRIM DATA</button></a> -->
         <a href="tampildata.php"><button>TAMPIL DATA</button></a>
     </center>
 </body>

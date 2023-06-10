@@ -10,7 +10,7 @@
     <center>
         <h1>TAMPIL DATA</h1>
         <a href="index.php"><button>KEMBALI</button></a>
-    </center>
+        <!-- <a href="kirimdata.php"><button>Tambah Data</button></button></a> -->
     <!-- TABEL KOMENTAR -->
     <h2>TABEL KOMENTAR</h2>
     <table border="1">
@@ -39,6 +39,8 @@
         }
         ?>
     </table>
+    <a href="./kirim_data/kirimdatakomentar.php"><button style="margin-top: 20px;">Tambah Data</button></button></a>
+
     <!-- AKHIR TABEL KOMENTAR -->
     <!-- TABEL POST -->
     <h2>TABEL POST</h2>
@@ -70,8 +72,9 @@
         }
         ?>
     </table>
+    <a href="./kirim_data/kirimdatapost.php"><button style="margin-top: 20px;">Tambah Data</button></button></a>
     <!-- AKHIR TABEL POST -->
-    <!-- TABEL POST -->
+    <!-- TABEL Kategori -->
     <h2>TABEL KATEGORI</h2>
     <table border="1">
         <tr>
@@ -97,6 +100,10 @@
         }
         ?>
     </table>
-    <!-- AKHIR TABEL POST -->
+    <a href="./kirim_data/kirimdatakategori.php"><button style="margin-top: 20px;">Tambah Data</button></button></a>
+
+    <!-- AKHIR TABEL KATEGORI -->
+    </center>
+
 </body>
 </html>
